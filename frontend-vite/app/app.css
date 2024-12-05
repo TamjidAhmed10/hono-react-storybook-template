@@ -2,11 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'Parkinsans';
+    src: url('/fonts/Parkinsans.woff2') format('woff2');
+    font-weight: 300 800;
+    font-display: swap;
+  }
+}
+
 html,
 body {
   @apply bg-white dark:bg-gray-950;
-
+  font-family: 'Parkinsans', sans-serif;
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
 }
+
+/* Apply Parkinsans to all text elements */
