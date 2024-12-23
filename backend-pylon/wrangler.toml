@@ -4,6 +4,8 @@ main = ".pylon/index.js"
 compatibility_date = "2024-09-03"
 compatibility_flags = ["nodejs_compat_v2"]
 
+
+
 # Automatically place your workloads in an optimal location to minimize latency.
 # If you are running back-end logic in a Worker, running it closer to your back-end infrastructure
 # rather than the end user may result in better performance.
@@ -11,13 +13,16 @@ compatibility_flags = ["nodejs_compat_v2"]
 # [placement]
 # mode = "smart"
 
+
+
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Docs:
 # - https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
 # Note: Use secrets to store sensitive data.
 # - https://developers.cloudflare.com/workers/configuration/secrets/
-# [vars]
-# MY_VARIABLE = "production_value"
+[vars]
+TURSO_CONNECTION_URL= "libsql://club-management-software-tamjidahmed10.turso.io"
+TURSO_AUTH_TOKEN= "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3MzQ3OTQyODYsImlkIjoiMWY2OTY2MmQtZmMyMC00MDIyLTkyN2EtYjQ4OWJlOWQ4NTUxIn0.bJgO86cfhVWyA9e-0P6qNHYNNFeWF4CZ1I2dik7xoHYv8g8x3hZH8bkAb9CLYHv2a_xjBtx-MJ_JMKNDvhjuCg"
 
 # Bind the Workers AI model catalog. Run machine learning models, powered by serverless GPUs, on Cloudflare’s global network
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#workers-ai
